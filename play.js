@@ -373,7 +373,7 @@ PlayMusic.prototype.getPlayLists = function (callback) {
 * @param playlistName string - the playlist name
 * @param callback function(err, mutationStatus) - success callback
 */
-PlayMusic.prototype.addPlayList = function (playlistName, callback) {
+PlayMusic.prototype.addPlayList = function (playlistName, description, callback) {
     var that = this;
     var mutations = [
     {
@@ -382,6 +382,7 @@ PlayMusic.prototype.addPlayList = function (playlistName, callback) {
             "deleted": false,
             "lastModifiedTimestamp": 0,
             "name": playlistName,
+			"description": description || null, 
             "type": "USER_GENERATED"
         }
     }
