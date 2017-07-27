@@ -371,6 +371,7 @@ PlayMusic.prototype.getPlayLists = function (callback) {
 * Creates a new playlist
 *
 * @param playlistName string - the playlist name
+* @param description string - the playlist description
 * @param callback function(err, mutationStatus) - success callback
 */
 PlayMusic.prototype.addPlayList = function (playlistName, description, callback) {
